@@ -24,9 +24,9 @@ func SetupCompose(
 	}
 
 	if err := stack.WithEnv(map[string]string{
-		"db":       db,
-		"user":     user,
-		"password": password,
+		"DB":       db,
+		"USER":     user,
+		"PASSWORD": password,
 	}).Up(
 		t.Context(),
 		compose.RunServices("postgres"),
