@@ -11,6 +11,8 @@ import (
 )
 
 func TestSetupContainer(t *testing.T) {
+	t.Parallel()
+
 	dsn := testx.SetupContainer(t)
 
 	t.Logf("Postgres DSN: %s", dsn)
@@ -45,6 +47,8 @@ func TestSetupContainer(t *testing.T) {
 }
 
 func TestSetupPostgres(t *testing.T) {
+	t.Parallel()
+
 	dsn := testx.SetupPostgres(t)
 
 	t.Logf("Postgres DSN: %s", dsn)
@@ -79,6 +83,8 @@ func TestSetupPostgres(t *testing.T) {
 }
 
 func TestSetupCompose(t *testing.T) {
+	t.Parallel()
+
 	dsn := testx.SetupCompose(t)
 
 	t.Logf("Postgres DSN: %s", dsn)
