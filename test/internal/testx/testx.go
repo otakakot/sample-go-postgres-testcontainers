@@ -217,7 +217,5 @@ func SetupCompose(
 		t.Fatal(err)
 	}
 
-	dsn := "postgres://" + user + ":" + password + "@" + host + ":" + port.Port() + "/" + db + "?sslmode=disable"
-
-	return dsn
+	return "postgres://" + user + ":" + password + "@" + host + ":" + port.Port() + "/" + db + "?sslmode=disable"
 }
