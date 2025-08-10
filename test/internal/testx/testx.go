@@ -161,7 +161,6 @@ func SetupPostgres(
 
 	testcontainers.CleanupContainer(t, container)
 
-	// データベース接続文字列を取得
 	dsn, err := container.ConnectionString(t.Context(), "sslmode=disable")
 	if err != nil {
 		t.Fatal(err)
